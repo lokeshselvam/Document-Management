@@ -4,7 +4,7 @@ import streamlit as st
 # Define the Streamlit app
 def main():
     st.set_page_config(
-        page_title="Login page",
+        page_title="NAS Manager",
         page_icon="👋",
     )
     st.sidebar.success("Select the above page")

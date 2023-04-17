@@ -4,14 +4,14 @@ import pandas as pd
 from get_result import *
 
 st.write(st.session_state['username'])
-# if 'username' not in st.session_state:
-#     html = '<meta http-equiv="refresh" content="0; url=/" />'
-#     st.write(html, unsafe_allow_html=True)
+if 'username' not in st.session_state:
+    html = '<meta http-equiv="refresh" content="0; url=/" />'
+    st.write(html, unsafe_allow_html=True)
     
-st.set_page_config(
-        page_title="Meeting Summarizer",
-        page_icon="👋",
-    )
+# st.set_page_config(
+#         page_title="Meeting Summarizer",
+#         page_icon="👋",
+#     )
 if 'start_point' not in st.session_state:
     st.session_state['start_point'] = 0
 
