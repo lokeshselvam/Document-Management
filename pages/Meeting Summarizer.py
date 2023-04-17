@@ -6,8 +6,6 @@ from get_result import *
 if 'username' not in st.session_state:
     html = '<meta http-equiv="refresh" content="0; url=/" />'
     st.write(html, unsafe_allow_html=True)
-else:
-    continue
     
 st.set_page_config(
         page_title="Meeting Summarizer",
