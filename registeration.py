@@ -22,8 +22,9 @@ def main():
                 if username in users and users[username]["password"] == password:
                     st.success("Logged in!")
                     st.session_state['username'] = username
-                    html = '<meta http-equiv="refresh" content="0; url=/FileManager" />'
-                    st.write(html, unsafe_allow_html=True)
+                    st.write(st.session_state['username'])
+                    # html = '<meta http-equiv="refresh" content="0; url=/FileManager" />'
+                    # st.write(html, unsafe_allow_html=True)
                 else:
                     st.error("Invalid username or password")
             elif mode == "Register":
