@@ -8,6 +8,8 @@ def main():
         page_icon="👋",
     )
     st.sidebar.success("Select the above page")
+    
+
 
     st.title("Login / Register")
     mode = st.radio("Select mode:", ("Login", "Register"))
@@ -21,7 +23,7 @@ def main():
             # Check if the entered username and password match a record in the JSON data
             if username in users and users[username]["password"] == password:
                 st.success("Logged in!")
-                html = '<meta http-equiv="refresh" content="0; url=/filemanager" />'
+                html = '<meta http-equiv="refresh" content="0; url=/FileManager" />'
                 st.write(html, unsafe_allow_html=True)
             else:
                 st.error("Invalid username or password")
@@ -32,4 +34,4 @@ def main():
                 json.dump(users, f)
             st.success("Registered!")
 if __name__=="__main__":
-	main()
+    main()

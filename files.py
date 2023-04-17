@@ -3,7 +3,7 @@ import streamlit as st
 
 # Define the Streamlit app
 def main():
-    st.title("File Manager")
+   
     file_type = st.selectbox("Select file type:", ("All", "Image", "Text", "PDF"))
     files = get_files(file_type)
     file = st.selectbox("Select a file:", files)
@@ -12,7 +12,7 @@ def main():
 
     # File upload section
     st.header("Upload a File")
-    uploaded_file = st.file_uploader("Choose a file to upload", type=file_type.lower())
+    uploaded_file = st.file_uploader("Choose a file to upload" )
     if uploaded_file is not None:
         save_uploaded_file(uploaded_file)
 

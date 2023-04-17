@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 import mimetypes
+import files as fm
 from PIL import Image
 
 st.set_page_config(page_title="File Manager", page_icon=":file_folder:")
@@ -70,7 +71,4 @@ for i, file in enumerate(filtered_files):
             os.remove(file_path)
             st.experimental_rerun()
 
-# Add confirmation dialog for file deletions
-delete_confirmation = st.checkbox("Show delete confirmation", value=True, key="delete_confirmation")
-if delete_confirmation:
-    st.warning("This will permanently delete files. Use with caution.")
+fm.main()
