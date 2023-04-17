@@ -4,9 +4,10 @@ import mimetypes
 import files as fm
 from PIL import Image
 
-if 'username' not in st.session_state:
-    html = '<meta http-equiv="refresh" content="0; url=/" />'
-    st.write(html, unsafe_allow_html=True)
+st.write(st.session_state['username'])
+# if 'username' not in st.session_state:
+#     html = '<meta http-equiv="refresh" content="0; url=/" />'
+#     st.write(html, unsafe_allow_html=True)
 
 st.set_page_config(page_title="File Manager", page_icon=":file_folder:")
 
