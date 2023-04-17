@@ -24,15 +24,16 @@ files = os.listdir(cwd)
 # Create a sidebar with buttons for navigating directories
 st.sidebar.success("Select the above page")
 with st.sidebar:
-    if st.button("Logout", key="logout"):
-        nav_page("Login")
     st.header("Navigation")
-    if st.button("Home", key="home"):
-        os.chdir(cwd)
-        files = os.listdir(cwd)
-    if st.button("Parent Directory", key="parent"):
-        os.chdir("..")
-        files = os.listdir(os.getcwd())
+    if st.button("Logout", key="logout"):
+        html = '<meta http-equiv="refresh" content="0; url=/" />'
+        st.write(html, unsafe_allow_html=True)
+    # if st.button("Home", key="home"):
+    #     os.chdir(cwd)
+    #     files = os.listdir(cwd)
+    # if st.button("Parent Directory", key="parent"):
+    #     os.chdir("..")
+    #     files = os.listdir(os.getcwd())
 
 # Add a search bar
 search_term = st.sidebar.text_input("Search", key="search")

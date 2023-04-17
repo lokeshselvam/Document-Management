@@ -11,11 +11,13 @@ st.set_page_config(
 if 'username' not in st.session_state:
     html = '<meta http-equiv="refresh" content="0; url=/" />'
     st.write(html, unsafe_allow_html=True)
+
 st.sidebar.success("Select the above page")
 with st.sidebar:
     if st.button("Logout", key="logout"):
-        nav_page("Login")
-
+        html = '<meta http-equiv="refresh" content="0; url=/" />'
+        st.write(html, unsafe_allow_html=True)
+        
 if 'start_point' not in st.session_state:
     st.session_state['start_point'] = 0
 
