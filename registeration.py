@@ -48,7 +48,6 @@ def main():
                 if username in users and users[username]["password"] == password:
                     st.success("Logged in!")
                     st.session_state['username'] = username
-                    st.write(st.sidebar)
                     nav_page("FileManager")
                 else:
                     st.error("Invalid username or password")
