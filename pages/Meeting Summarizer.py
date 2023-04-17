@@ -3,11 +3,18 @@ import requests
 import pandas as pd
 from get_result import *
 
+st.set_page_config(
+    page_title="NAS Manager",
+    page_icon="📂",
+)
+
 if 'username' not in st.session_state:
     html = '<meta http-equiv="refresh" content="0; url=/" />'
     st.write(html, unsafe_allow_html=True)
-    
-st.write(st.session_state['username'])
+st.sidebar.success("Select the above page")
+with st.sidebar:
+    if st.button("Logout", key="logout"):
+        nav_page("Login")
 
 if 'start_point' not in st.session_state:
     st.session_state['start_point'] = 0

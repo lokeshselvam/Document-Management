@@ -31,7 +31,7 @@ def nav_page(page_name, timeout_secs=3):
 def main():
     st.set_page_config(
         page_title="NAS Manager",
-        page_icon="👋",
+        page_icon="📂",
     )
     st.sidebar.success("Select the above page")
     if 'username' not in st.session_state:
