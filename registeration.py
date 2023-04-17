@@ -22,7 +22,7 @@ def main():
                 if username in users and users[username]["password"] == password:
                     st.success("Logged in!")
                     st.session_state['username'] = username
-                    st.write(st.session_state['username'])
+                    st.write(st.sidebar)
                     # html = '<meta http-equiv="refresh" content="0; url=/FileManager" />'
                     # st.write(html, unsafe_allow_html=True)
                 else:
